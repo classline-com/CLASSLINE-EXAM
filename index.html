@@ -71,8 +71,17 @@
       const adminPanel = document.getElementById("admin");
       try {
         const tg = window.Telegram && window.Telegram.WebApp;
-        if (!tg || !tg.initData) {
-          status.textContent = "برای ورود، مینی‌اپ را از داخل ربات تلگرام باز کنید";
+        if (!tg) {
+          status.textContent = "خطای تشخیص تلگرام: WebApp API بارگذاری نشده است";
+          console.error("CLASSLINE diagnostic: window.Telegram.WebApp is missing");
+          return;
+        }
+        if (!tg.initData) {
+          status.textContent = "تلگرام شناسایی شد، اما اطلاعات ورود دریافت نشد؛ از دکمه شروع آزمون ربات باز کنید";
+          console.error("CLASSLINE diagnostic: WebApp exists but initData is empty", {
+            platform: tg.platform || "unknown",
+            version: tg.version || "unknown"
+          });
           return;
         }
         tg.ready();
