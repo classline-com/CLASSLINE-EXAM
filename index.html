@@ -62,7 +62,7 @@
 
     <footer class="footer"><span>CLASSLINE | کلاس‌لاین</span><span>سامانه آزمون آنلاین · نسخه اولیه</span></footer>
   </main>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js" onerror="document.getElementById(\'authStatus\').textContent=\'بارگذاری کتابخانه تلگرام ناموفق بود؛ اتصال به telegram.org را بررسی می‌کنیم\'; console.error(\'CLASSLINE: Telegram WebApp script failed to load\')"></script>
   <script>
     (async function connectTelegram() {
       console.log("CLASSLINE EXAM build 2026-11-09-2");
