@@ -25,14 +25,14 @@
   <main class="shell">
     <header class="top">
       <div class="brand"><div class="logo">CL</div><div><strong>CLASSLINE EXAM</strong><small>سامانه آزمون آنلاین کلاس‌لاین</small></div></div>
-      <div class="tag" id="authStatus">در انتظار ورود از تلگرام</div>
+      <div class="tag" id="authStatus">نسخه جدید · در حال بارگذاری...</div>
     </header>
 
     <section class="hero">
       <div class="eyebrow">EXAM PLATFORM · ۱۴۰۶</div>
       <h1>مسیر پیشرفتت رو با آزمون بسنج.</h1>
       <p>آزمون‌های تستی، کارنامه تحلیلی، رتبه‌بندی و تراز؛ همه در یک محیط یکپارچه و در دسترس از طریق بات تلگرام کلاس‌لاین.</p>
-      <div class="notice">● این نسخه نمایشی است؛ هنوز به پایگاه داده و بات متصل نشده است.</div>
+      <div class="notice">● در حال اتصال امن به حساب تلگرام و سرویس آزمون...</div>
     </section>
 
     <div class="grid">
@@ -65,6 +65,7 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script>
     (async function connectTelegram() {
+      console.log("CLASSLINE EXAM build 2026-11-09-2");
       const status = document.getElementById("authStatus");
       const adminTab = document.querySelector('[data-tab="admin"]');
       const adminPanel = document.getElementById("admin");
